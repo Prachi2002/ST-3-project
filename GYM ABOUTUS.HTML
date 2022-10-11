@@ -1,0 +1,455 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <!-- <link href="https://fonts.googleapis.com/css2?family=Ubuntu:wght@300&display=swap" rel="stylesheet">  -->
+    <!-- <link rel="preconnect" href="https://fonts.googleapis.com">  -->
+    <!-- <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>  -->
+    <!-- <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Trirong"> -->
+
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Trirong">
+
+    <style type="text/css">
+        /* *{
+            font-family: "Trirong", serif;
+
+        } */
+        body {
+            /* background-color: rgb(49, 56, 48) */
+            background: linear-gradient(to bottom right, #010200 24%, #0000ff 78%);
+            /* font-family: 'Ubuntu', sans-serif; */
+            font-family: "Trirong", serif;
+        }
+
+        p,
+        h1 {
+            font-family: trebuchet ms;
+            color: white;
+        }
+
+        /* a:link {
+            color: green;
+            background-color: transparent;
+            text-decoration: none;
+        }
+
+        a:visited {
+            color: pink;
+            background-color: transparent;
+            text-decoration: none;
+        }
+
+        a:hover {
+            color: red;
+            background-color: transparent;
+            text-decoration: underline;
+        }
+
+        a:active {
+            color: yellow;
+            background-color: transparent;
+            text-decoration: underline;
+        }
+
+        table {
+            position: sticky;
+            top: 2px;
+        } */
+
+        .imageclass{
+            box-shadow: 5px 6px 6px black;
+            transition: all 0.5s ease;
+        }
+        .imageclass:hover{
+            border: 2px solid black;
+            box-shadow: 8px 9px 9px gray;
+            transform: scale(1.1);
+        }
+
+        /* HEADER  */
+
+        h3 {
+            margin: 20px;
+            padding: 5px;
+            cursor: pointer;
+            font-size: 30px;
+            transition: all 0.5s ease;
+        }
+
+        h3:hover {
+            font-size: 34px;
+            color: rgb(189, 61, 39);
+        }
+
+        .head {
+            /* margin: 0px */
+            display: flex;
+            /* border: 3px solid black; */
+            justify-content: center;
+            align-items: center;
+            /* background-color: #313030; */
+            background-color: #514c4c;
+            border-radius: 10px;
+            font-weight: bold;
+            /* display: relative; */
+            /* z-index: 4; */
+        }
+
+        .link {
+            /* border: 2px solid red; */
+            margin: 15px;
+            padding: 10px;
+            font-size: 16px;
+            color: #c59898;
+            transition: all 0.5s ease;
+        }
+
+        .link:hover {
+            color: rgb(189, 61, 39);
+            /* color: #9c5454; */
+            font-size: 20px;
+        }
+
+        .link:active {
+            color: rgb(97, 18, 18);
+        }
+
+        header {
+            /* position: sticky; */
+            top: 2px;
+            /* border: 2px solid black; */
+            margin: 20px;
+        }
+
+        header:hover {
+            /* border: 2px solid gray; */
+            border: 2px solid #c39f9f;
+            border-radius: 10px;
+        }
+
+        /* TESTIMONIALS CSS */
+        .project {
+            /* border: 2px solid red; */
+            display: flex;
+            /* flex-direction: column; */
+            /* width: 1500px; */
+            justify-content: space-around;
+            height: 600px;
+            align-items: center;
+            /* background-color: royalblue; */
+            background-image: linear-gradient(to top right, #006699 17%, #000066 57%);
+            /* margin: 0px; */
+            margin-top: 150px;
+            /* display: relative; */
+            /* z-index: 1; */
+        }
+
+        /* .cse{
+            display: flex;
+            flex-direction: row;
+            justify-content: space-around;
+            height: 600px;
+            align-items: center;
+            background-color: royalblue;
+        } */
+
+
+        .imagess {
+            position: relative;
+            width: 400px;
+        }
+
+        .image__img {
+            display: block;
+            width: 100%;
+            height: 440px;
+            box-shadow: 9px 10px 10px black;
+        }
+
+        .image__img:hover {
+            box-shadow: 11px 12px 12px black;
+        }
+
+        .image__overlay {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-color: rgba(0, 0, 0, 0.6);
+            color: white;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            opacity: 0;
+            transition: all 0.5s ease;
+        }
+
+        .image__overlay:hover {
+            opacity: 1;
+            border: 2px solid white;
+            box-shadow: 11px 12px 12px gray;
+        }
+
+        .image_description {
+            font-size: 20px;
+            margin-top: 3px;
+            /* padding: 13px; */
+        }
+
+        /* TESTIMONIAL CSS FINISH  */
+
+        /* FOOTER */
+        .foot {
+            background: linear-gradient(rgb(11, 11, 80), rgb(57, 57, 202));
+            border: 2px solid black;
+            display: fles;
+            flex-direction: column;
+        }
+
+        .mains {
+            margin: 35px;
+            /* border: 2px solid red; */
+        }
+
+        #d1 {
+            display: flex;
+            /* justify-content: space-around; */
+            justify-content: space-evenly;
+        }
+
+        .dam {
+            /* border: 2px solid purple; */
+            margin: 20px;
+            padding: 25px;
+            box-sizing: border-box;
+            /* font-size: 18px; */
+            color: rgb(184, 170, 170);
+        }
+
+        .m {
+            margin-top: 42px;
+        }
+
+        .f {
+            /* font-size: 23px; */
+            color: white;
+            text-shadow: 4px 5px 5px grey;
+        }
+
+        ul {
+            list-style: none;
+            /* text-align: center; */
+        }
+
+        ul:hover {
+            cursor: pointer;
+        }
+
+        .pgraph {
+            padding: 10px;
+            text-align: center;
+            color: white;
+        }
+
+        .vl {
+            border: 2px solid gray;
+            height: 420px;
+        }
+    </style>
+    <script src="https://kit.fontawesome.com/c19366b445.js" crossorigin="anonymous"></script>\
+</head>
+
+<body>
+    <header>
+        <nav class="navbar">
+            <div class="head">
+                <h3><i class="fas fa-dumbbell" style="font-size:30px;color: red; "></i>Ultra Fitness Gym</h3>
+                <a href="GYM HOMEPAGE.HTML" class="link">HOME</a>
+                <a href="#" class="link">ABOUT US</a>
+                <a href="GYM PROGRAMS.HTML" class="link">PROGRAMMES </a>
+                <a href="GYM CATEGORIES.HTML" class="link">CATEGORIES</a>
+                <!-- <a href="GYM GALLERY.HTML" class="link">GALLERY</a> -->
+                <a href="GYM CONTACTUS.HTML" class="link">CONTACT US</a>
+                <a href="GYM LOGIN.HTML" class="link">LOGIN</a>
+            </div>
+
+        </nav>
+    </header>
+
+    <img src="https://media.istockphoto.com/photos/empty-gym-picture-id1132006407?k=20&m=1132006407&s=612x612&w=0&h=Z7nJu8jntywb9jOhvjlCS7lijbU4_hwHcxoVkxv77sg=" alt=""
+        height="300px" width="300px" style="margin-top: 50px; margin-left: 100px;" class="imageclass">
+
+    <img src="https://c1.wallpaperflare.com/preview/941/608/14/fitness-studio-training-fitness-room.jpg" alt=""
+        height="300px" width="300px" style="margin-top: 50px; margin-left: 700px;" class="imageclass">
+
+    <div class="container py-3">
+        <h1 class="text-center" align="center" style="color:#fd3c3d; margin-top: 10px; margin-bottom: 80px; text-shadow: 4px 5px 4px gray;">ABOUT THE GYM</h1>
+        <p class="text-center font-italic" align="center" style="font-size:20px;">Take care of your body. It's the only
+            place you have to live.</p>
+        <div class="row py-3">
+            <div class="col-sm-12">
+                <p class="text-justify" align="center">At THE GYM, our mission is to provide you with the ultimate
+                    fitness experience, one that focuses on your specific fitness needs, helps you achieve the results
+                    you are after and invigorates your soul. We guarantee the highest quality equipment and training
+                    programs available, an expert staff, special amenities that are often not found in other health
+                    clubs, attentive service and truly sophisticated surroundings. Our every Fitness training center is
+                    committed to being a unique Fitness training center in india.<br><br>
+
+                    We believe in being different. Not merely for the sake of being dissimilar, but different by being
+                    the best in the fitness industry. We set out with one simple and honest goal in mind; to be
+                    sensitive to our memberâ€™s needs and fitness requirements. Our ideology is to provide our members
+                    with the best fitness technologies and services that no others can provide. We listen, we are
+                    sensitive to your needs, and most importantly, we thus know what you, as a gym-goer, want.<br><br>
+
+                    Welcome to THE GYM, the latest and modern fitness clubs in New Delhi India Located at Pitampura,
+                    Rajouri Garden, Patel Nagar, Vikas Puri, Janak Puri, Model Town, Dayanand Vihar, Punjabi Bagh,
+                    Malviya Nagar and Paschim Vihar.<br><br>
+
+                    THE GYM is a fitness club brand that specializes on the prestigious market segment of business
+                    professionals and the working professionals. With our dedication in bringing you the latest fitness
+                    technologies, THE GYM is equipped with many hi-tech equipment and state-of-the art fitness gadgets.
+                    Our professional personal trainers and trained helpers dedication will ensure that you receive the
+                    appropriate fitness program, customized to your fitness and health needs. We currently have the
+                    highest trainers to memberâ€™s ratio in our industry. Our members enjoy our private yet classy
+                    environment and this will ensure that you exercise in utmost privacy and luxury. At THE GYM, we
+                    proudly fuse fitness with fineness; because here, fitness is a privilege.<br><br>
+
+                    THE GYM is the brainchild of our founders G.Khatter who believe that healthy lifestyle lead to
+                    better quality of life. The main idea is to have our members enjoy their fitness trainings in classy
+                    and private settings. As such, it is not surprising that THE GYM is passionately led by a team of
+                    highly qualified and experienced fitness instructors and health professionals. Our team's passion is
+                    to serve our members with sheer dedication, warm friendliness and joyful helpfulness.<br><br>
+
+                    At THE GYM, our primary goal is to create awareness and easy access to keep your body, mind and
+                    spirit, at peak performance. Our vision is to maintain a fitness centre catering for our memberâ€™s
+                    physical wellbeing, thereby improving, building and maintaining a stronger and fitter body condition
+                    complimented by a health foods bar to nourish your body's daily fibre and vitamins
+                    requirements.<br><br>
+
+                    If you are looking for unwaivered personal attention during your training regime, then THE GYM is
+                    the place you will want to be.</p>
+            </div>
+        </div>
+    </div>
+
+    <div class="project">
+        <!-- <div class="case" id="case1">
+            <h1>TSETIMONIALS</h1>
+        </div> -->
+
+        <!-- <div class="cse" id="case2"> -->
+        <!-- IMAGE 1 -->
+        <div class="imagess">
+            <img src="https://blog.classpass.com/wp-content/uploads/2018/05/how-long-to-stay-in-workout-clothes.jpg"
+                alt="" class="image__img" id="imtest1">
+            <div class="image__overlay">
+                <p class="img_description">
+                    I will have been training at Ultra Fitness Gym Within 3 years December 2020. Since working
+                    out here I am stronger and in better shape than at any other time in my life. I find every class
+                    and
+                    every trainer are different but always super challenging, and this variety of workouts keeps me
+                    invested
+                    in maintaining a consistent motivation to show up and work hard. The trainers are ALWAYS so
+                    encouraging,
+                    offering modifications when needed. Fitness Within always seems to go above and beyond to meet
+                    the
+                    needs
+                    of ALL of their clients.
+                </p>
+            </div>
+        </div>
+
+
+
+        <!-- IMAGE 2 -->
+        <div class="imagess">
+            <img src="https://www.eatthis.com/wp-content/uploads/sites/4/2020/01/man-weight-lifting-training-workout-gym.jpg?quality=82&strip=all&w=1200"
+                alt="" class="image__img" id="imtest1">
+            <div class="image__overlay">
+                <p class="img_description">
+                    I started Ultra Fitness Gym Within’s Remote Coaching over 2 months ago. I have lost some
+                    weight, gotten on a healthy exercise and meal schedule and feel great about myself. The workouts
+                    kick
+                    your butt. I love that I can see how I’m increasing my endurance by being able to do the videos
+                    online
+                    multiple times.
+                </p>
+            </div>
+        </div>
+
+
+        <!-- IMAGE 3 -->
+        <div class="imagess">
+            <img src="https://images.unsplash.com/photo-1548690312-e3b507d8c110?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxzZWFyY2h8Mnx8d29tYW4lMjBneW18ZW58MHx8MHx8&w=1000&q=80"
+                alt="" class="image__img" id="imtest1">
+            <div class="image__overlay">
+                <p class="img_description">
+                    I joined Ultra Fitness Gym Within about 8 months ago and I lost 52lbs. My favorite thing
+                    about their workouts is how much the coaches care and push you. The best thing working with an
+                    accountability coach is their never ending availability to ask questions and get support. I
+                    found their
+                    nutritional guidance and meal plans were easy to follow and modify. I really appreciate how much
+                    everyone there truly cares about your success.
+                </p>
+            </div>
+        </div>
+        <!-- </div> -->
+    </div>
+
+    <footer>
+        <div class="foot">
+            <div class="main" id="d1">
+                <div class="dam" id="f1">
+                    <h1 class="f">ULTRA FITNESS GYM</h1>
+                    <br>
+                    <p>Burn Gym provides you the fitness solution that's more personal,<br>intelligent and encouraging
+                        than
+                        ever before. </p>
+                </div>
+
+                <div class="vl"></div>
+
+                <div class="dam" id="f2">
+                    <h1 class="f">LINKS</h1>
+                    <br>
+                    <ul>
+                        <li>Gym</li>
+                        <li>Blogs</li>
+                        <li>Terms</li>
+                        <li>Privacy Policy</li>
+                        <li>Complaince</li>
+                        <li>Career</li>
+                        <li>Press</li>
+                        <li>Contact Us</li>
+                    </ul>
+                </div>
+
+                <div class="vl"></div>
+
+                <div class="dam" id="f3">
+                    <h1 class="f">CONTACT</h1>
+                    <div class="m">
+                        <p>Regional office : SCO 62 and 63,</p>
+                        <p>Sector 8 C, Chandigarh</p>
+                        <p>0172- 5076490/1</p>
+                        <p><a href="info@ultrafitnessgym.com">info@ultrafitnessgym.com</a></p>
+                    </div>
+                </div>
+            </div>
+            <hr style="color: gray;">
+            <div class="main" id="d2">
+                <p class="pgraph">&copy; Copyright 2020 Ultra Fitness Gym. All Rights Reserved</p>
+            </div>
+        </div>
+    </footer>
+</body>
+</body>
+
+</html>

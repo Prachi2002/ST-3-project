@@ -1,0 +1,676 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ultra Fitness Gym</title>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Trirong">
+    <style>
+        /* HEADER */
+        h3 {
+            margin: 20px;
+            padding: 5px;
+            cursor: pointer;
+            font-size: 30px;
+            transition: all 0.5s ease;
+        }
+
+        h3:hover {
+            font-size: 34px;
+            color: rgb(189, 61, 39);
+        }
+
+        /* header head  */
+        .head {
+            /* margin: 0px */
+            display: flex;
+            /* border: 3px solid black; */
+            justify-content: center;
+            align-items: center;
+            /* background-color: #313030; */
+            background-color: #514c4c;
+            border-radius: 10px;
+            font-weight: bold;
+        }
+
+        .link {
+            /* border: 2px solid red; */
+            margin: 15px;
+            padding: 10px;
+            font-size: 16px;
+            color: #c59898;
+            transition: all 0.5s ease;
+        }
+
+        .link:hover {
+            color: rgb(189, 61, 39);
+            /* color: #9c5454; */
+            font-size: 20px;
+        }
+
+        .link:active {
+            color: rgb(97, 18, 18);
+        }
+
+        header {
+            margin: 20px;
+            /* position: sticky; */
+            top: 2px;
+            /* border: 2px solid gray; */
+        }
+
+        header:hover {
+            border: 3px solid #c39f9f;
+            /* border: 3px solid rgb(189, 61, 39); */
+            border-radius: 10px;
+        }
+
+
+        /* CONTENT  */
+        /* DIV CONTAINER  */
+        body {
+            /* background-color: rgb(49, 56, 48) */
+            background: linear-gradient(to bottom right, #010200 24%, #0000ff 78%);
+            font-family: "Trirong", serif;
+        }
+
+        .container {
+            /* border: 10px solid black; */
+            display: flex;
+            /* flex-wrap: wrap; */
+            /* flex-direction: column; */
+            /* align-items: center ; */
+            justify-content: center;
+            height: 1200px;
+        }
+
+        .box1 {
+            display: flex;
+            flex-direction: column;
+            /* border: 2px solid red; */
+            /* margin: 10px; */
+            padding: 5px;
+            width: 700px;
+            box-sizing: border-box;
+            align-items: center;
+            /* flex-grow: 2; */
+            /* margin-top: 100px; */
+
+        }
+
+        .box2 {
+            display: flex;
+            flex-direction: column;
+            /* border: 2px solid purple; */
+            /* margin: 10px; */
+            padding: 5px;
+            width: 700px;
+            box-sizing: border-box;
+            align-items: center;
+            /* align-self: flex-end; */
+            /* flex-grow: 1; */
+            /* margin-top: 100px; */
+        }
+
+        .text {
+            background-color: #c39f9f;
+            border: 5px solid black;
+            border-radius: 50px;
+            margin: 30px;
+            padding: 50px;
+            width: 483px;
+            height: 400px;
+            box-shadow: 9px 10px 10px black;
+            transition: all 1s ease;
+            /* box-sizing: border-box;  */
+        }
+
+        .text:hover {
+            border: 7px solid black;
+            border-radius: 0px;
+            background-color: #b37878;
+            box-shadow: 12px 12px 12px black;
+            transform: scale(1.1);
+            /* width: 543px; */
+            /* height: 460px; */
+        }
+
+        .text1 {
+            /* background-color: #c39f9f; */
+            /* border: 5px solid black; */
+            border-radius: 30px;
+            margin: 30px;
+            padding: 80px;
+            width: 483;
+            height: 400px;
+            /* border: 2px solid red; */
+            /* box-sizing: border-box;  */
+        }
+
+        footer {
+            text-align: center;
+            padding: 3px;
+            background-color: #0c0a1f;
+            color: white;
+            display: block;
+        }
+
+        /* h1 head */
+        .hea {
+            font-style: bold;
+            font-size: 45px;
+            text-align: center;
+            padding: 10px;
+            margin: 4px;
+            text-shadow: 4px 5px 5px rgb(63, 60, 60);
+        }
+
+        p {
+            font-size: 18px;
+            text-align: center;
+        }
+
+        /* IMAGES CSS  */
+        #b2,
+        #b4,
+        #c1,
+        #c3 {
+            display: flex;
+            /* flex-direction: column; */
+            justify-content: center;
+            justify-content: space-around;
+            flex-grow: 2;
+        }
+
+        .img {
+            margin: 14px;
+            height: 250px;
+            width: 250px;
+            /* margin-top: 35px;
+            margin-bottom: 35px; */
+            padding: 5px;
+            box-sizing: border-box;
+            border-radius: 6px;
+            box-shadow: 8px 9px 9px gray;
+            box-shadow: 8px 9px 9px black;
+            transition: all 1s ease;
+        }
+
+        .img:hover {
+            border: 2px solid black;
+            border-radius: 0px;
+            box-shadow: 10px 11px 11px rgb(197, 178, 178);
+            height: 290px;
+            width: 290px;
+            /* transform: scale(1.2); */
+        }
+
+        #img1 {
+            align-self: flex-start;
+        }
+
+        #img2 {
+            align-self: flex-end;
+        }
+
+        /* FOOTER */
+        .foot {
+            background: linear-gradient(rgb(11, 11, 80), rgb(57, 57, 202));
+            border: 2px solid black;
+            display: fles;
+            flex-direction: column;
+            margin-bottom: 20px;
+        }
+
+        .mains {
+            margin: 35px;
+            /* border: 2px solid red; */
+        }
+
+        #d1 {
+            display: flex;
+            /* justify-content: space-around; */
+            justify-content: space-evenly;
+            margin-top: -515px;
+        }
+
+        .dam {
+            /* border: 2px solid purple; */
+            margin: 20px;
+            padding: 25px;
+            box-sizing: border-box;
+            /* font-size: 18px; */
+            color: rgb(184, 170, 170);
+        }
+
+        .m {
+            margin-top: 42px;
+        }
+
+        .f {
+            /* font-size: 23px; */
+            color: white;
+            text-shadow: 4px 5px 5px grey;
+        }
+
+        ul {
+            list-style: none;
+            /* text-align: center; */
+        }
+
+        ul:hover {
+            cursor: pointer;
+        }
+
+        .pgraph {
+            padding: 10px;
+            text-align: center;
+            color: white;
+        }
+
+        .vl {
+            border: 2px solid gray;
+            height: 420px;
+        }
+
+        /* FOOTER */
+        .foot {
+            /* background: linear-gradient(rgb(11, 11, 80), rgb(57, 57, 202)); */
+            background-color: #0c0a1f;
+            /* border: 2px solid black; */
+            display: fles;
+            flex-direction: column;
+            margin-top: 585px;
+        }
+
+        .mains {
+            margin: 35px;
+            /* border: 2px solid red; */
+        }
+
+        #d1 {
+            display: flex;
+            /* justify-content: space-around; */
+            justify-content: space-evenly;
+        }
+
+        .dam {
+            /* border: 2px solid purple; */
+            margin: 20px;
+            padding: 25px;
+            box-sizing: border-box;
+            /* font-size: 18px; */
+            color: rgb(184, 170, 170);
+        }
+
+        .m {
+            margin-top: 42px;
+        }
+
+        .f {
+            /* font-size: 23px; */
+            color: white;
+            text-shadow: 4px 5px 5px grey;
+        }
+
+        ul {
+            list-style: none;
+            /* text-align: center; */
+        }
+
+        ul:hover {
+            cursor: pointer;
+        }
+
+        .pgraph {
+            padding: 10px;
+            text-align: center;
+            color: white;
+        }
+
+        .vl {
+            border: 2px solid gray;
+            height: 420px;
+        }
+
+        /* TESTIMONIALS CSS */
+        .project {
+            /* border: 2px solid red; */
+            display: flex;
+            flex-direction: row;
+            /* width: 1500px; */
+            justify-content: space-around;
+            height: 600px;
+            align-items: center;
+            /* background-color: royalblue; */
+            background-image: linear-gradient(to top right, #006699 17%, #000066 57%);
+            margin-top: 1000px;
+        }
+
+
+        .imagess {
+            position: relative;
+            width: 400px;
+        }
+
+        .image__img {
+            display: block;
+            width: 100%;
+            height: 440px;
+            box-shadow: 9px 10px 10px black;
+        }
+
+        .image__img:hover {
+            box-shadow: 11px 12px 12px black;
+        }
+
+        .image__overlay {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-color: rgba(0, 0, 0, 0.6);
+            color: white;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            opacity: 0;
+            transition: all 0.5s ease;
+        }
+
+        .image__overlay:hover {
+            opacity: 1;
+            /* border: 2px solid black; */
+            /* box-shadow: 11px 12px 12px black; */
+            border: 2px solid white;
+            box-shadow: 11px 12px 12px rgb(175, 158, 158);
+        }
+
+        .image_description {
+            font-size: 20pxem;
+            margin-top: 3px;
+            /* padding: 13px; */
+        }
+
+        /* TESTIMONIAL CSS FINISH  */
+
+        .wrapper {
+            display: flex;
+            height: 100vh;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .hea {
+            background-image: url(https://image.shutterstock.com/image-photo/purple-sparkling-lights-festive-background-260nw-545029738.jpg);
+            background-attachment: fixed;
+            -webkit-text-fill-color: transparent;
+            -webkit-background-clip: text;
+        }
+    </style>
+    <script src="https://kit.fontawesome.com/c19366b445.js" crossorigin="anonymous"></script>
+</head>
+
+<body>
+    <section>
+        <header>
+            <nav class="navbar">
+                <div class="head">
+                    <h3><i class="fas fa-dumbbell" style="font-size:30px;color: red; "></i>Ultra Fitness Gym</h3>
+                    <a href="GYM HOMEPAGE.HTML" class="link">HOME</a>
+                    <a href="GYM ABOUTUS.HTML" class="link">ABOUT US</a>
+                    <a href="GYM PROGRAMS.HTML" class="link">PROGRAMMES</a>
+                    <a href="GYM CATEGORIES.HTML" class="link">CATEGORIES</a>
+                    <!-- <a href="GYM GALLERY.HTML" class="link">GALLERY</a> -->
+                    <a href="GYM CONTACTUS.HTML" class="link">CONTACT US</a>
+                    <a href="GYM LOGIN.HTML" class="link">LOGIN</a>
+                </div>
+
+            </nav>
+        </header>
+        <div class="container">
+
+            <!-- /* 1ST HALF */ -->
+            <div class="box1">
+                <div class="text" id="b1">
+                    <h1 class="hea">Weight Loss</h1>
+                    <p class="p">Losing weight and maintaining it is hard because of how your body responds to weight
+                        loss.
+                        After losing weight, the body tries to put it back on. While healthy eating and increased
+                        physical
+                        activity are important, for many people it may not be enough to keep the weight off.
+                        <br><br>
+                    <p class="p">To lose weight in a healthy manner, join our exclusive weight loss course.</p>
+                </div>
+                <div class="text1" id="b2">
+                    <img src="https://hips.hearstapps.com/hmg-prod.s3.amazonaws.com/images/bench-press-spot-1571829590.jpg"
+                        alt="not available" class="img" id="img5" height="200px" width="200px"
+                        onmouseout="this.src='https://hips.hearstapps.com/hmg-prod.s3.amazonaws.com/images/bench-press-spot-1571829590.jpg'"
+                        onmouseover="this.src='https://onnitacademy.imgix.net/wp-content/uploads/2020/01/powerrack.jpg'">
+
+
+                    <img src="https://www.bodybuilding.com/images/2018/august/a-girls-gotta-bench-chest-workout-and-training-tips-1-700xh.jpg"
+                        alt="not available" class="img" id="img6" height="200px" width="200px"
+                        onmouseout="this.src='https://www.bodybuilding.com/images/2018/august/a-girls-gotta-bench-chest-workout-and-training-tips-1-700xh.jpg'"
+                        onmouseover="this.src='https://cdn.thewirecutter.com/wp-content/uploads/2018/06/adjustabledumbbells-2x1-1020111.jpg?auto=webp&quality=75&crop=2:1&width=1024'">>
+                </div>
+
+                <div class="text" id="b3">
+                    <h1 class="hea">Weight Gain</h1>
+                    <p class="p">Weight gain occurs when more energy (as calories from food and beverage consumption) is
+                        gained than
+                        the
+                        energy expended by life activities, including normal physiological processes and physical
+                        exercise.
+                    </p>
+
+                    <p class="p">If you are interested in gaining weight in a healthy manner, join our exclusive weight
+                        gain
+                        course.
+                    </p>
+                </div>
+
+                <div class="text1" id="b4">
+                    <img src="https://www.verywellfit.com/thmb/3GqbINz0zL25elFbCVjjBIUeD8Y=/1339x1339/smart/filters:no_upscale()/GettyImages-946047152-cb36a6bb104d45b297ec27327cbd09e5.jpg"
+                        class="img" id="img7" height="200px" width="200px"
+                        onmouseout="this.src='https://www.verywellfit.com/thmb/3GqbINz0zL25elFbCVjjBIUeD8Y=/1339x1339/smart/filters:no_upscale()/GettyImages-946047152-cb36a6bb104d45b297ec27327cbd09e5.jpg'"
+                        
+                        onmouseover="this.src='https://complete-physio.co.uk/wp-content/uploads/2020/06/7-tips-for-a-successful-return-to-the-gym-after-lockdown-1.jpg'">
+                    <img src="https://hips.hearstapps.com/hmg-prod.s3.amazonaws.com/images/burning-calories-and-strengthening-her-core-with-a-royalty-free-image-1579042741.jpg"
+                        alt="not available" class="img" id="img8" height="200px" width="200px"
+                        onmouseout="this.src='https://hips.hearstapps.com/hmg-prod.s3.amazonaws.com/images/burning-calories-and-strengthening-her-core-with-a-royalty-free-image-1579042741.jpg'"
+                        
+                        onmouseover="this.src='https://i0.wp.com/stanzaliving.wpcomstaging.com/wp-content/uploads/2021/06/gyms.jpg?fit=1000%2C665&ssl=1'">
+                </div>
+            </div>
+
+
+            <!-- /* 2ND HALF  */ -->
+            <div class="box2">
+                <!-- IMAGE  -->
+                <div class="text1" id="c1">
+                    <img src="https://i0.wp.com/images-prod.healthline.com/hlcmsresource/images/AN_images/woman-measuring-stomach-1296x728.jpg?w=1155&h=1528"
+                        alt="not available" height="200px" width="200px" class="img" id="img1"
+                        onmouseout="this.src='https://i0.wp.com/images-prod.healthline.com/hlcmsresource/images/AN_images/woman-measuring-stomach-1296x728.jpg?w=1155&h=1528'"
+                        
+                        onmouseover="this.src='https://thumbs.dreamstime.com/b/gym-equipment-accessories-stone-floor-against-dark-background-gym-equipment-accessories-floor-against-dark-172445946.jpg'">
+                    <img src="https://www.outsideonline.com/wp-content/uploads/2019/06/13/beginner-weight-lifter_h.jpg"
+                        alt="not available" height="200px" width="200px" class="img" id="img2"
+                        onmouseout="this.src='https://www.outsideonline.com/wp-content/uploads/2019/06/13/beginner-weight-lifter_h.jpg'"
+                        
+                        onmouseover="this.src='https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQJZM1lclfUdGWwv_KMvRCO8kYQ3nSPSSrP7LIYOLtgoemzsQiArXjXHkHsXADLlK6XO20&usqp=CAU'">
+                </div>
+                <!-- TEXT  -->
+                <div class="text" id="c2">
+                    <h1 class="hea">Aesthetics</h1>
+                    <p class="p">Muscle cells subjected to regular bouts of exercise followed by periods of rest with
+                        sufficient
+                        dietary
+                        protein undergo hypertrophy as a response to the stress of training. ... Because there are more
+                        potential power strokes associated with increased actin and myosin concentrations, the muscle
+                        can
+                        exhibit greater strength.</p>
+                </div>
+                <!-- IMAGE  -->
+                <div class="text1" id="c3">
+                    <img src="https://c.ndtvimg.com/abb1osk_weight-training_625x300_09_August_18.jpg"
+                        alt="not available" class="img" id="img3" height="200px" width="200px"
+                        onmouseout="this.src='https://c.ndtvimg.com/abb1osk_weight-training_625x300_09_August_18.jpg'"
+                        
+                        onmouseover="this.src='https://assets.telegraphindia.com/telegraph/2020/Oct/1603383828_gyms.jpg'">
+                    <img src="https://post.healthline.com/wp-content/uploads/2021/02/male-weight-lifting-shoulders-732x549-thumbnail.jpg"
+                        alt="not available" class="img" id="img4" height="200px" width="200px"
+                        onmouseout="this.src='https://post.healthline.com/wp-content/uploads/2021/02/male-weight-lifting-shoulders-732x549-thumbnail.jpg'"
+                        
+                        onmouseover="this.src='https://images.unsplash.com/photo-1580261450046-d0a30080dc9b?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxzZWFyY2h8MTl8fGd5bXxlbnwwfHwwfHw%3D&w=1000&q=80'">
+                </div>
+                <!-- TEXT  -->
+                <div class="text" id="c4">
+                    <h1 class="hea">Strength Training</h1>
+                    <p class="p">Strength training — also known as weight or resistance training — is physical activity
+                        designed to
+                        improve muscular strength and fitness by exercising a specific muscle or muscle group against
+                        external
+                        resistance, including free-weights, weight machines, or your own body weight,“The basic
+                        principle is
+                        to
+                        apply a load and overload the muscle so it needs to adapt and get stronger,”.</p>
+
+                    <p class="p">To improve your muscle strength, join aur exclusive strength training course.</p>
+                </div>
+            </div>
+
+        </div>
+    </section>
+
+    <div class="project">
+
+        <!-- IMAGE 1 -->
+        <div class="imagess">
+            <img src="https://blog.classpass.com/wp-content/uploads/2018/05/how-long-to-stay-in-workout-clothes.jpg"
+                alt="" class="image__img" id="imtest1">
+            <div class="image__overlay">
+                <p class="img_description">
+                    I will have been training at Ultra Fitness Gym Within 3 years December 2020. Since working
+                    out here I am stronger and in better shape than at any other time in my life. I find every class and
+                    every trainer are different but always super challenging, and this variety of workouts keeps me
+                    invested
+                    in maintaining a consistent motivation to show up and work hard. The trainers are ALWAYS so
+                    encouraging,
+                    offering modifications when needed. Fitness Within always seems to go above and beyond to meet the
+                    needs
+                    of ALL of their clients.
+                </p>
+            </div>
+        </div>
+
+
+
+        <!-- IMAGE 2 -->
+        <div class="imagess">
+            <img src="https://www.eatthis.com/wp-content/uploads/sites/4/2020/01/man-weight-lifting-training-workout-gym.jpg?quality=82&strip=all&w=1200"
+                alt="" class="image__img" id="imtest1">
+            <div class="image__overlay">
+                <p class="img_description">
+                    I started Ultra Fitness Gym Within’s Remote Coaching over 2 months ago. I have lost some
+                    weight, gotten on a healthy exercise and meal schedule and feel great about myself. The workouts
+                    kick
+                    your butt. I love that I can see how I’m increasing my endurance by being able to do the videos
+                    online
+                    multiple times.
+                </p>
+            </div>
+        </div>
+
+
+        <!-- IMAGE 3 -->
+        <div class="imagess">
+            <img src="https://images.unsplash.com/photo-1548690312-e3b507d8c110?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxzZWFyY2h8Mnx8d29tYW4lMjBneW18ZW58MHx8MHx8&w=1000&q=80"
+                alt="" class="image__img" id="imtest1">
+            <div class="image__overlay">
+                <p class="img_description">
+                    I joined Ultra Fitness Gym Within about 8 months ago and I lost 52lbs. My favorite thing
+                    about their workouts is how much the coaches care and push you. The best thing working with an
+                    accountability coach is their never ending availability to ask questions and get support. I found
+                    their
+                    nutritional guidance and meal plans were easy to follow and modify. I really appreciate how much
+                    everyone there truly cares about your success.
+                </p>
+            </div>
+        </div>
+    </div>
+    </div>
+
+    <footer>
+        <div class="foot">
+            <div class="main" id="d1">
+                <div class="dam" id="f1">
+                    <h1 class="f">ULTRA FITNESS GYM</h1>
+                    <br>
+                    <p>Burn Gym provides you the fitness solution that's more personal,<br>intelligent and encouraging
+                        than
+                        ever before. </p>
+                </div>
+
+                <div class="vl"></div>
+
+                <div class="dam" id="f2">
+                    <h1 class="f">LINKS</h1>
+                    <br>
+                    <ul>
+                        <li>Gym</li>
+                        <li>Blogs</li>
+                        <li>Terms</li>
+                        <li>Privacy Policy</li>
+                        <li>Complaince</li>
+                        <li>Career</li>
+                        <li>Press</li>
+                        <li>Contact Us</li>
+                    </ul>
+                </div>
+
+                <div class="vl"></div>
+
+                <div class="dam" id="f3">
+                    <h1 class="f">CONTACT</h1>
+                    <div class="m">
+                        <p>Regional office : SCO 62 and 63,</p>
+                        <p>Sector 8 C, Chandigarh</p>
+                        <p>0172- 5076490/1</p>
+                        <p><a href="info@ultrafitnessgym.com">info@ultrafitnessgym.com</a></p>
+                    </div>
+                </div>
+            </div>
+            <hr style="color: gray;">
+            <div class="main" id="d2">
+                <p class="pgraph">&copy; Copyright 2020 Ultra Fitness Gym. All Rights Reserved</p>
+            </div>
+        </div>
+    </footer>
+
+
+
+    <script>
+        var tl = gsap.timeline({ repeat: -1 });
+        tl.to("h1", 30, { backgroundPosition: "-960px 0" });
+    </script>
+
+    <!-- <script>
+        function setNewImage()
+        {
+            document.getElementById(img1).src="https://hips.hearstapps.com/hmg-prod.s3.amazonaws.com/images/bench-press-spot-1571829590.jpg"
+        }
+        function setOldImage()
+        {
+            document.getElementById(img2).src="https://www.bodybuilding.com/images/2018/august/a-girls-gotta-bench-chest-workout-and-training-tips-1-700xh.jpg"
+        }
+    </script> -->
+
+</body>
+
+</html>
+

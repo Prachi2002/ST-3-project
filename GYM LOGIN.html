@@ -1,0 +1,572 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Gym login</title>
+    <!-- <link rel="preconnect" href="https://fonts.googleapis.com">  -->
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Trirong">
+    <style>
+        /* BODY  */
+        body {
+            background: linear-gradient(to bottom right, #010200 24%, #0000ff 78%);
+            background-color: rgb(49, 56, 48);
+            /* background: linear-gradient( rgba(23, 36, 21, 1), rgba(102, 110, 102, 0.5)); */
+            /* height: 500px; */
+            /* font-family: 'Ubuntu', sans-serif; */
+            font-family: "Trirong", serif;
+        }
+
+        h1 {
+            color: white;
+            text-shadow: 3px 4px 4px black;
+            font-size: 40px;
+            font-weight: bold;
+        }
+
+
+        footer {
+            text-align: center;
+            padding: 3px;
+            background-color: #0c0a1f;
+            color: white;
+            display: block;
+        }
+
+        .container {
+            display: flex;
+            /* border: 2px solid black; */
+            /* height: 1200px; */
+            margin-top: 100px;
+        }
+
+        /* FORM CSS  */
+        .form {
+            background-color: #c39f9f;
+            display: flex;
+            flex-direction: column;
+            border: 5px solid black;
+            box-shadow: 9px 10px 10px black;
+            border-radius: 40px;
+            flex-basis: 500px;
+            height: 560px;
+
+            /* own alignment  */
+            align-self: center;
+
+            /* to align items  */
+            align-items: center;
+            margin: 20px;
+            margin-left: 165px;
+            padding: 5px;
+            /* color: white; */
+            transition: all 0.5s ease-in;
+        }
+
+        .form:hover {
+            background-color: #b37878;
+            border-radius: 0px;
+            /* height: 520px; */
+            /* flex-basis: 460px; */
+
+            transform: scale(1.06);
+            border: 8px solid black;
+            /* box-shadow: 11px 12px 12px gray; */
+            box-shadow: 11px 12px 12px black;
+            /* color: black; */
+            /* background-color: rgb(80, 86, 79) */
+            /* background-color: #4d4b44; */
+            /* color: black; */
+        }
+
+
+        .inp {
+            margin: 12px;
+            padding: 8px;
+            width: 200px;
+            border-radius: 4px;
+            border: none;
+            box-shadow: 4px 5px 5px black;
+            transition: all 0.3s ease-in;
+        }
+
+        .inp:hover {
+            cursor: pointer;
+            background-color: rgb(176, 150, 150);
+            border: 2px solid black;
+            height: 50px;
+            width: 220px;
+        }
+
+        #name {
+            margin-top: 17px;
+        }
+
+        #sub {
+            margin-bottom: 35px;
+        }
+
+        /* IMAGE CSS */
+
+        .images {
+            /* border: 2px solid purple; */
+            width: 600px;
+            margin: 20px;
+            margin-left: 145px;
+            display: flex;
+            flex-direction: column;
+            /* box-shadow: 8px 9px 9px gray; */
+        }
+
+        #img1 {
+            /* box-shadow: 8px 9px 9px gray; */
+            align-self: flex-start;
+        }
+
+        #img2 {
+            /* box-shadow: 8px 9px 9px gray; */
+            align-self: flex-end;
+        }
+
+        #img3 {
+            /* box-shadow: 8px 9px 9px gray; */
+            align-self: flex-start;
+        }
+
+        .img {
+            height: 200px;
+            width: 265px;
+            margin: 15px;
+            padding: 5px;
+            border-radius: 5px;
+            transition: all 0.5s ease-in;
+            box-shadow: 8px 9px 9px rgb(233, 206, 206);
+        }
+
+        .img:hover {
+            height: 220px;
+            width: 285px;
+            transform: scale(1.1);
+            border-radius: 0px;
+            border: 2px solid black;
+            box-shadow: 10px 12px 12px rgb(201, 197, 197);
+        }
+
+        /* HEADER  */
+
+        h3 {
+            margin: 20px;
+            padding: 5px;
+            cursor: pointer;
+            font-size: 30px;
+            transition: all 0.5s ease;
+        }
+
+        h3:hover {
+            font-size: 34px;
+            color: rgb(189, 61, 39);
+        }
+
+        .head {
+            /* margin: 0px */
+            display: flex;
+            /* border: 3px solid black; */
+            justify-content: center;
+            align-items: center;
+            /* background-color: #313030; */
+            background-color: #514c4c;
+            border-radius: 10px;
+            font-weight: bold;
+        }
+
+        .link {
+            /* border: 2px solid red; */
+            margin: 15px;
+            padding: 10px;
+            font-size: 16px;
+            color: #c59898;
+            transition: all 0.5s ease;
+        }
+
+        .link:hover {
+            color: rgb(189, 61, 39);
+            /* color: #9c5454; */
+            font-size: 20px;
+        }
+
+        .link:active {
+            color: rgb(97, 18, 18);
+        }
+
+        header {
+            /* position: sticky; */
+            top: 2px;
+            /* border: 2px solid black; */
+            margin: 20px;
+        }
+
+        header:hover {
+            /* border: 2px solid gray; */
+            border: 2px solid #c39f9f;
+            border-radius: 10px;
+        }
+
+        /* FOOTER */
+        footer {
+            margin: 0px;
+            padding: 0px;
+            margin-top: 160px;
+        }
+
+        .foot {
+            /* background: linear-gradient(rgb(11, 11, 80), rgb(57, 57, 202)); */
+            background-color: #0c0a1f;
+            /* border: 2px solid black; */
+            display: flex;
+            flex-direction: column;
+        }
+
+        .mains {
+            margin: 35px;
+            /* border: 2px solid red; */
+        }
+
+        #d1 {
+            display: flex;
+            /* justify-content: space-around; */
+            justify-content: space-evenly;
+            margin-top: 70px;
+        }
+
+        .dam {
+            /* border: 2px solid purple; */
+            margin: 20px;
+            padding: 25px;
+            box-sizing: border-box;
+            /* font-size: 18px; */
+            color: rgb(184, 170, 170);
+        }
+
+        .m {
+            margin-top: 42px;
+        }
+
+        .f {
+            /* font-size: 23px; */
+            color: white;
+            text-shadow: 4px 5px 5px grey;
+        }
+
+        ul {
+            list-style: none;
+            /* text-align: center; */
+        }
+
+        ul:hover {
+            cursor: pointer;
+        }
+
+        .pgraph {
+            padding: 10px;
+            text-align: center;
+            color: white;
+        }
+
+        .vl {
+            border: 2px solid gray;
+            height: 420px;
+        }
+
+        /* TESTIMONIALS CSS */
+        .project {
+            /* border: 2px solid red; */
+            display: flex;
+            flex-direction: row;
+            /* width: 1500px; */
+            justify-content: space-around;
+            height: 600px;
+            align-items: center;
+            /* background-color: royalblue; */
+            background-image: linear-gradient(to top right, #006699 17%, #000066 57%);
+            margin-top: 160px;
+        }
+
+
+        .imagess {
+            position: relative;
+            width: 400px;
+        }
+
+        .image__img {
+            display: block;
+            width: 100%;
+            height: 440px;
+            box-shadow: 9px 10px 10px black;
+        }
+
+        .image__img:hover {
+            box-shadow: 11px 12px 12px black;
+        }
+
+        .image__overlay {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-color: rgba(0, 0, 0, 0.6);
+            color: white;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            opacity: 0;
+            transition: all 0.5s ease;
+        }
+
+        .image__overlay:hover {
+            opacity: 1;
+            /* border: 2px solid white; */
+            /* box-shadow: 11px 12px 12px black; */
+            border: 2px solid white;
+            box-shadow: 11px 12px 12px rgb(175, 158, 158);
+        }
+
+        .image_description {
+            font-size: 20pxem;
+            margin-top: 3px;
+            /* padding: 13px; */
+        }
+
+        /* TESTIMONIAL CSS FINISH  */
+
+        span {
+            opacity: 0;
+            transition: all 0.5s ease;
+            transform: translateY(50px);
+            display: inline-block;
+
+        }
+
+        span.fade {
+            opacity: 1;
+            transform: translateY(0px);
+            color: black;
+            /* text-shadow: white; */
+            /* color: blue; */
+        }
+    </style>
+    <script src="https://kit.fontawesome.com/c19366b445.js" crossorigin="anonymous"></script>
+    <script src="login.js"></script>
+</head>
+
+<body>
+
+    <!-- HEADER  -->
+    <header>
+        <nav class="navbar">
+            <div class="head">
+                <h3><i class="fas fa-dumbbell" style="font-size:30px;color: red; "></i>Ultra Fitness Gym</h3>
+                <a href="GYM HOMEPAGE.HTML" class="link">HOME</a>
+                <a href="GYM ABOUTUS.HTML" class="link">ABOUT US</a>
+                <a href="GYM PROGRAMS.HTML" class="link">PROGRAMMES</a>
+                <a href="GYM CATEGORIES.HTML" class="link">CATEGORIES</a>
+                <!-- <a href="GYM GALLERY.HTML" class="link">GALLERY</a> -->
+                <a href="GYM CONTACTUS.HTML" class="link">CONTACT US</a>
+                <a href="GYM LOGIN.HTML" class="link">LOGIN</a>
+            </div>
+
+        </nav>
+    </header>
+
+    <!-- BODY  -->
+    <div class="container">
+        <form class="form" id="form" action="GYM LOGIN.html" method="get">
+            <h1 class="fun">Join The Best Gym Now!</h1>
+            <input type="text" name="name" class="inp" id="name" placeholder="Enter Your Name" required>
+            <input type="text" id="age" name="Age" class="inp" placeholder="Enter Your Age" min="14" required>
+            <input type="text" id="gender" name="Gender" class="inp" placeholder="Enter Your Gender" required>
+            <input type="text" name="Locality" class="inp" id="locality" placeholder="Enter Your Locality" required>
+            <input type="email" name="Email Id" class="inp" id="email" placeholder="Enter Your Email Id" required>
+            <input type="text" name="number" id="number" class="inp" placeholder="Enter Your Number" required>
+            <!-- <input type="button" class="inp" id="submit" value="Submit" required onclick="validate()"> -->
+            <button type="submit" class="inp" onclick="myFunction()">Submit</button>
+        </form>
+
+        <div class="images">
+
+
+
+            <img src="https://hips.hearstapps.com/hmg-prod.s3.amazonaws.com/images/fit-young-african-american-woman-working-out-with-royalty-free-image-1639138320.jpg"
+                alt="not available" id="img1" class="img"
+                onmouseout="this.src='https://hips.hearstapps.com/hmg-prod.s3.amazonaws.com/images/fit-young-african-american-woman-working-out-with-royalty-free-image-1639138320.jpg'"
+                onmouseover="this.src='https://cdn2.coachmag.co.uk/sites/coachmag/files/shutterstock_151938761.jpg'">
+
+
+
+
+
+            <img src="https://image.shutterstock.com/image-photo/man-weight-training-gym-equipment-260nw-532444771.jpg"
+                alt="not available" id="img2" class="img"
+                onmouseout="this.src='https://image.shutterstock.com/image-photo/man-weight-training-gym-equipment-260nw-532444771.jpg'"
+                onmouseover="this.src='https://image.made-in-china.com/2f0j00AiHrWbcgCkzq/New-Line-Bodybuilding-Fitness-Commercial-Gym-Equipment-Seated-Chest-Press.jpg'">
+
+
+
+
+
+            <img src="https://media.istockphoto.com/photos/side-view-of-beautiful-muscular-woman-running-on-treadmill-picture-id1132086660?k=20&m=1132086660&s=612x612&w=0&h=UTXXsDbUuREHV0UwHThgI144yKyReetDYlIL5C6_JoI="
+                alt="not available" id="img3" class="img"
+                onmouseout="this.src='https://media.istockphoto.com/photos/side-view-of-beautiful-muscular-woman-running-on-treadmill-picture-id1132086660?k=20&m=1132086660&s=612x612&w=0&h=UTXXsDbUuREHV0UwHThgI144yKyReetDYlIL5C6_JoI='"
+                onmouseover="this.src='https://thumbs.dreamstime.com/b/empty-treadmill-standing-gym-near-big-window-empty-treadmill-standing-gym-near-big-window-nobody-fitness-sport-healthy-lifestyle-208442607.jpg'">
+            </a>
+        </div>
+    </div>
+
+    <div class="project">
+
+        <!-- IMAGE 1 -->
+        <div class="imagess">
+            <img src="https://blog.classpass.com/wp-content/uploads/2018/05/how-long-to-stay-in-workout-clothes.jpg"
+                alt="" class="image__img" id="imtest1">
+            <div class="image__overlay">
+                <p class="img_description">
+                    I will have been training at Ultra Fitness Gym Within 3 years December 2020. Since working
+                    out here I am stronger and in better shape than at any other time in my life. I find every class and
+                    every trainer are different but always super challenging, and this variety of workouts keeps me
+                    invested
+                    in maintaining a consistent motivation to show up and work hard. The trainers are ALWAYS so
+                    encouraging,
+                    offering modifications when needed. Fitness Within always seems to go above and beyond to meet the
+                    needs
+                    of ALL of their clients.
+                </p>
+            </div>
+        </div>
+
+
+
+        <!-- IMAGE 2 -->
+        <div class="imagess">
+            <img src="https://www.eatthis.com/wp-content/uploads/sites/4/2020/01/man-weight-lifting-training-workout-gym.jpg?quality=82&strip=all&w=1200"
+                alt="" class="image__img" id="imtest1">
+            <div class="image__overlay">
+                <p class="img_description">
+                    I started Ultra Fitness Gym Within’s Remote Coaching over 2 months ago. I have lost some
+                    weight, gotten on a healthy exercise and meal schedule and feel great about myself. The workouts
+                    kick
+                    your butt. I love that I can see how I’m increasing my endurance by being able to do the videos
+                    online
+                    multiple times.
+                </p>
+            </div>
+        </div>
+
+
+        <!-- IMAGE 3 -->
+        <div class="imagess">
+            <img src="https://images.unsplash.com/photo-1548690312-e3b507d8c110?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxzZWFyY2h8Mnx8d29tYW4lMjBneW18ZW58MHx8MHx8&w=1000&q=80"
+                alt="" class="image__img" id="imtest1">
+            <div class="image__overlay">
+                <p class="img_description">
+                    I joined Ultra Fitness Gym Within about 8 months ago and I lost 52lbs. My favorite thing
+                    about their workouts is how much the coaches care and push you. The best thing working with an
+                    accountability coach is their never ending availability to ask questions and get support. I found
+                    their
+                    nutritional guidance and meal plans were easy to follow and modify. I really appreciate how much
+                    everyone there truly cares about your success.
+                </p>
+            </div>
+        </div>
+    </div>
+    </div>
+
+    <footer>
+        <div class="foot">
+            <div class="main" id="d1">
+                <div class="dam" id="f1">
+                    <h1 class="f">ULTRA FITNESS GYM</h1>
+                    <br>
+                    <p>Burn Gym provides you the fitness solution that's more personal,<br>intelligent and encouraging
+                        than
+                        ever before. </p>
+                </div>
+
+                <div class="vl"></div>
+
+                <div class="dam" id="f2">
+                    <h1 class="f">LINKS</h1>
+                    <br>
+                    <ul>
+                        <li>Gym</li>
+                        <li>Blogs</li>
+                        <li>Terms</li>
+                        <li>Privacy Policy</li>
+                        <li>Complaince</li>
+                        <li>Career</li>
+                        <li>Press</li>
+                        <li>Contact Us</li>
+                    </ul>
+                </div>
+
+                <div class="vl"></div>
+
+                <div class="dam" id="f3">
+                    <h1 class="f">CONTACT</h1>
+                    <div class="m">
+                        <p>Regional office : SCO 62 and 63,</p>
+                        <p>Sector 8 C, Chandigarh</p>
+                        <p>0172- 5076490/1</p>
+                        <p><a href="info@ultrafitnessgym.com">info@ultrafitnessgym.com</a></p>
+                    </div>
+                </div>
+            </div>
+            <hr style="color: gray;">
+            <div class="main" id="d2">
+                <p class="pgraph">&copy; Copyright 2020 Ultra Fitness Gym. All Rights Reserved</p>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        const text = document.querySelector(".fun");
+        const strText = text.textContent;
+        const splitText = strText.split("");
+        text.textContent = "";
+        for (let i = 0; i < splitText.length; i++) {
+            text.innerHTML += "<span>" + splitText[i] + "</span>"
+        }
+
+        let char = 0;
+        let timer = setInterval(onTick, 50);
+
+        function onTick() {
+            const span = text.querySelectorAll('span')[char];
+            span.classList.add('fade')
+            char++
+            if (char === splitText.length) {
+                complete()
+                return;
+            }
+        }
+
+        function complete() {
+            clearInterval(timer);
+            timer = null;
+        }
+    </script>
+
+
+    <script>
+        function myFunction() {
+            alert("Form Submitted");
+        }
+    </script>
+
+
+
+</body>
+
+</html>

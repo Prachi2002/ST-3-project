@@ -1,0 +1,513 @@
+<html>
+<head>
+    <title>Gallery</title>
+    <link rel="stylesheet" href="gallery.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Trirong">
+    <STYLE>
+        /* HEADER */
+        body{
+            font-family: "Trirong", serif;
+        }
+        h3 {
+            margin: 20px;
+            padding: 5px;
+            cursor: pointer;
+            font-size: 30px;
+            transition: all 0.5s ease;
+        }
+
+        h3:hover {
+            font-size: 34px;
+            color: rgb(189, 61, 39);
+        }
+
+        /* header head  */
+        .head {
+            /* margin: 0px */
+            display: flex;
+            /* border: 3px solid black; */
+            justify-content: center;
+            align-items: center;
+            /* background-color: #313030; */
+            background-color: #514c4c;
+            border-radius: 10px;
+            font-weight: bold;
+            margin-bottom: 200px;
+        }
+
+        .link {
+            /* border: 2px solid red; */
+            margin: 15px;
+            padding: 10px;
+            font-size: 16px;
+            color: #c59898;
+            transition: all 0.5s ease;
+        }
+
+        .link:hover {
+            color: rgb(189, 61, 39);
+            /* color: #9c5454; */
+            font-size: 20px;
+        }
+
+        .link:active {
+            color: rgb(97, 18, 18);
+        }
+
+        header {
+            margin: 20px;
+            /* position: sticky; */
+            top: 2px;
+            /* border: 2px solid gray; */
+        }
+
+        header:hover {
+            /* border: 3px solid #c39f9f; */
+            /* border: 3px solid rgb(189, 61, 39); */
+            border-radius: 10px;
+        }
+
+        /* TESTIMONIALS CSS */
+        .project {
+            /* border: 2px solid red; */
+            display: flex;
+            /* flex-direction: column; */
+            /* width: 1500px; */
+            justify-content: space-around;
+            height: 600px;
+            align-items: center;
+            /* background-color: royalblue; */
+            background-image: linear-gradient(to top right, #006699 17%, #000066 57%);
+            /* margin: 0px; */
+            margin-top: 270px;
+        }
+        /* .cse{
+            display: flex;
+            flex-direction: row;
+            justify-content: space-around;
+            height: 600px;
+            align-items: center;
+            background-color: royalblue;
+        } */
+
+
+        .imagess {
+            position: relative;
+            width: 400px;
+        }
+
+        .image__img {
+            display: block;
+            width: 100%;
+            height: 440px;
+            box-shadow: 9px 10px 10px black;
+        }
+
+        .image__img:hover {
+            box-shadow: 11px 12px 12px black;
+        }
+
+        .image__overlay {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-color: rgba(0, 0, 0, 0.6);
+            color: white;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            opacity: 0;
+            transition: all 0.5s ease;
+        }
+
+        .image__overlay:hover {
+            opacity: 1;
+            border: 2px solid white;
+            box-shadow: 11px 12px 12px gray;
+        }
+
+        .image_description {
+            font-size: 20px;
+            margin-top: 3px;
+            /* padding: 13px; */
+        }
+
+        /* TESTIMONIAL CSS FINISH  */
+        h1{
+            text-align: center;
+            background-color: royalblue;
+        }
+
+        /* FOOTER */
+        .foot {
+            background: linear-gradient(rgb(11, 11, 80), rgb(57, 57, 202));
+            border: 2px solid black;
+            display: fles;
+            flex-direction: column;
+        }
+        .mains{
+            margin: 35px;
+            /* border: 2px solid red; */
+        }
+        #d1{
+            display: flex;
+            /* justify-content: space-around; */
+            justify-content: space-evenly;
+            margin-top: 150px;
+        }
+        .dam{
+            /* border: 2px solid purple; */
+            margin: 20px;
+            padding: 25px;
+            box-sizing: border-box;
+            /* font-size: 18px; */
+            color: rgb(184, 170, 170);
+        }
+        .m{
+            margin-top: 42px;
+        }
+        .f{
+            /* font-size: 23px; */
+            color: white;
+            text-shadow: 4px 5px 5px grey;
+        }
+        ul{
+            list-style: none;
+            /* text-align: center; */
+        }
+        ul:hover{
+            cursor: pointer;
+        }
+        .pgraph{
+            padding: 10px;
+            text-align: center;
+            color: white;
+        }
+        .vl{
+            border: 2px solid gray;
+            height: 420px;
+        }
+    </STYLE>
+</head>
+<body>
+    <header>
+        <nav class="navbar">
+            <div class="head">
+                <h3><i class="fas fa-dumbbell" style="font-size:30px;color: red; "></i>Ultra Fitness Gym</h3>
+                <a href="GYM HOMEPAGE.HTML" class="link">HOME</a>
+                <a href="GYM ABOUTUS.HTML" class="link">ABOUT US</a>
+                <a href="GYM PROGRAMS.HTML" class="link">PROGRAMMES</a>
+                <a href="GYM CATEGORIES.HTML" class="link">CATEGORIES</a>
+                <!-- <a href="GYM GALLERY.HTML" class="link">GALLERY</a> -->
+                <a href="GYM CONTACTUS.HTML" class="link">CONTACT US</a>
+                <a href="GYM LOGIN.HTML" class="link">LOGIN</a>
+            </div>
+
+        </nav>
+    </header>
+    <!-- navbar -->
+    <!-- <div class="item container" id="navbar">
+        <div class="item"><img src="ULTRA FITNESS.png" alt="" height="88px" width="321px"> </div>
+        <div class="item">HOME</div>
+        <div class="item">ABOUT US</div>
+        <div class="item">PROGRAMMES</div>
+        <div class="item">CATEGORIES</div>
+        <div class="item">GALLERY</div>
+        <div class="item">CONTACT US</div>
+        <div class="item">LOGIN</div>
+    </div> -->
+ <!-- gym tour -->
+
+ <!-- <img id="gym-tour-img"src="gymtour1.jpg" alt=""> -->
+
+ <!-- carousel  gym tour-->
+
+<div class="slider-box">
+    <div id="slider">
+        <img src="Untitled-4.png" alt="">
+        <img src="Untitled-2.png" alt="">
+        <img src="Untitled-3.png" alt="">
+        <img src="Untitled-1.png" alt="">
+    </div>
+    <div class="indicators">
+        <span id="btn1" class="active"></span>
+        <span id="btn2"></span>
+        <span id="btn3"></span>
+        <span id="btn4"></span>
+    </div>
+</div>
+ <span class="gym-tour-heading item container" style="margin-top: 110px; margin-bottom: 100px;">GYM TOUR</span>
+
+<!-- achievers -->
+<span class="achievers-heading item container" style="z-index: 3;">TRAINERS</span>
+<table style="position: absolute;top: 120%;border-style:collapse;" cellpadding="4">
+    <tr>
+        <td ><img class="img1" class="item" src="1.jpg" alt="" width="90%" ></td></td>
+        <td><img class="img1"  class="item"src="2.jpg" alt="" width="90%" ></td>
+        <td><img class="img1" class="item" src="3.jpg" alt="" width="90%" ></td>
+    </tr>
+</table>
+
+<!-- courses -->
+
+
+<div class="course1">
+<img src="blackBK.png" alt="" id="courses-img">
+<span class="courses-heading1 item container" style>COURSES</span>
+<img id="bk1" src="bk.png" alt="" width="1000px">
+<p id="course-heading">3 MONTHS OF WEIGHT LIFTING</p>
+<p id="course-quote">"Nothing truly great comes from a comfort zone."</p>
+<a href="#" id="course-button" class="item container">JOIN NOW</a>
+<p id="know-more" class="item container">KNOW MORE</p>
+</div>
+
+<div class="course2">
+<img src="blackBK.png" alt="" id="courses-img">
+<span class="courses-heading2 item container" style>COURSES</span>
+<img id="bk2" src="weight loss m.png" alt="" width="1000px">
+<p id="course-heading2">ULTIMATE WEIGHT LOSS CHALLENGE</p>
+<p id="course-quote2">"It comes down to one simple thing: How bad do you want it."</p>
+<a href="#" id="course-button2" class="item container">JOIN NOW</a>
+<p id="know-more2" class="item container">KNOW MORE</p>
+</div>
+
+<div class="course3">
+<img src="blackBK.png" alt="" id="courses-img">
+<span class="courses-heading item container" style>COURSES</span>
+<img id="bk3" src="42 days.png" alt="" width="1000px">
+<p id="course-heading3">42 DAYS TRANSFORMATION CHALLENGE</p>
+<p id="course-quote3">"Good is not enough if better is possible."</p>
+<a href="#" id="course-button3" class="item container">JOIN NOW</a>
+<p id="know-more3" class="item container">KNOW MORE</p>
+</div>
+
+<div class="course4">
+<img src="blackBK.png" alt="" id="courses-img">
+<span class="courses-heading4 item container" style>COURSES</span>
+<img id="bk4" src="aerobic.png" alt="" width="1000px">
+<p id="course-heading4">AEROBIC FIT</p>
+<p id="course-quote4">"Making excuses burns zero calories per hour."</p>
+<a href="#" id="course-button4" class="item container">JOIN NOW</a>
+<p id="know-more4" class="item container">KNOW MORE</p>
+</div>
+
+<div class="course5">
+<img src="blackBK.png" alt="" id="courses-img">
+<span class="courses-heading5 item container" style>COURSES</span>
+<img id="bk5" src="weight loss.png" alt="" width="1000px">
+<p id="course-heading5">PREMIUM WEIGHT LOSS CHALLENGE</p>
+<p id="course-quote5">"It always seem impossible until its done."</p>
+<a href="#" id="course-button5" class="item container">JOIN NOW</a>
+<p id="know-more5" class="item container">KNOW MORE</p>
+</div>
+
+<div class="course6">
+<img src="blackBK.png" alt="" id="courses-img">
+<span class="courses-heading6 item container" style>COURSES</span>
+<img id="bk6" src="42 day w.png" alt="" width="1000px">
+<p id="course-heading6">42 DAYS TRANSFORMATION CHALLENGE</p>
+<p id="course-quote6">"Obsession is what lazy people call dedication."</p>
+<a href="#" id="course-button6" class="item container">JOIN NOW</a>
+<p id="know-more6" class="item container">KNOW MORE</p>
+</div>
+    
+<a href="coursel.html" id="gym-tour-img"></a>
+
+
+ <!-- <footer id="footer1">
+
+    table
+    <table style="text-align:center;width:100%;" cellpadding="2">
+        <tr>
+            <td>
+    <div class="item " style="color: red;font-weight: 700;">Quick Links</div> </td>
+    <td>
+    <div class="item " style="color: red;font-weight: 700;">Contact Info</div>
+</td>
+<td>
+    <div class="item " style="color: red;font-weight: 700;" >Follow Us</div>
+</td>
+
+<tr>
+<td>
+    <div class="item "><a href="" class="footer-links">home</a> </div>
+    <div class="item "><a href="" class="footer-links">about us</a> </div>
+    <div class="item "><a href="" class="footer-links">programmes</a> </div>
+    <div class="item "><a href="" class="footer-links">categories</a> </div>
+    <div class="item "><a href="" class="footer-links">gallery</a> </div>
+    <div class="item "><a href="" class="footer-links">contact us</a> </div>
+    <div class="item "><a href="" class="footer-links">login</a> </div>
+</td>
+<td>
+    <div class="item "><a href="" class="footer-links">123-456-7890</a> </div>
+    <div class="item "><a href="" class="footer-links">111-222-333</a> </div>
+    <div class="item "><a href="" class="footer-links">chitkara@gmail.com</a> </div>
+    <div class="item "><a href="" class="footer-links">delhi,india-104032</a> </div>
+</td>
+<td>
+    <div class="item "><a href="" class="footer-links">facebook</a> </div>
+    <div class="item "><a href="" class="footer-links">twitter</a> </div>
+    <div class="item "><a href="" class="footer-links">instagram</a> </div>
+    <div class="item "><a href="" class="footer-links">linked in</a> </div>
+    </div>
+</td>
+</tr>
+</table>
+<div class="rights">
+    Created by <b style="color: red;"> GROUP 8 </b> | All Rights Reserved!
+</div>
+</footer>  -->
+
+<script>
+    // coursel 1
+  var slide = document.getElementById("slider");
+        var btn1 = document.getElementById('btn1');
+        var btn2 = document.getElementById('btn2');
+        var btn3 = document.getElementById('btn3');
+        var btn4 = document.getElementById('btn4');
+
+        btn1.onclick = function () {
+            slide.style.transform = "translateX(0px)";
+            btn1.classList.add('active');
+            btn2.classList.remove('active');
+            btn3.classList.remove('active');
+            btn4.classList.remive('active');
+        };
+        btn2.onclick = function () {
+            slide.style.transform = "translateX(-100%)";
+            btn1.classList.remove('active');
+            btn2.classList.add('active');
+            btn3.classList.remove('active');
+            btn4.classList.remove('active');
+        };
+        btn3.onclick = function () {
+            slide.style.transform = "translateX(-200%)";
+            btn1.classList.remove('active');
+            btn2.classList.remove('active');
+            btn3.classList.add('active');
+            btn4.classList.remove('active');
+        };
+        btn4.onclick = function () {
+            slide.style.transform = "translateX(-300%)";
+            btn1.classList.remove('active');
+            btn2.classList.remove('active');
+            btn3.classList.remove('active');
+            btn4.classList.add('active');
+        };
+</script>
+
+<div class="project">
+    <!-- <div class="case" id="case1">
+        <h1>TSETIMONIALS</h1>
+    </div> -->
+
+    <!-- <div class="cse" id="case2"> -->
+        <!-- IMAGE 1 -->
+        <div class="imagess">
+            <img src="https://blog.classpass.com/wp-content/uploads/2018/05/how-long-to-stay-in-workout-clothes.jpg"
+                alt="" class="image__img" id="imtest1">
+            <div class="image__overlay">
+                <p class="img_description">
+                    I will have been training at Ultra Fitness Gym Within 3 years December 2020. Since working
+                    out here I am stronger and in better shape than at any other time in my life. I find every class
+                    and
+                    every trainer are different but always super challenging, and this variety of workouts keeps me
+                    invested
+                    in maintaining a consistent motivation to show up and work hard. The trainers are ALWAYS so
+                    encouraging,
+                    offering modifications when needed. Fitness Within always seems to go above and beyond to meet
+                    the
+                    needs
+                    of ALL of their clients.
+                </p>
+            </div>
+        </div>
+
+
+
+        <!-- IMAGE 2 -->
+        <div class="imagess">
+            <img src="https://www.eatthis.com/wp-content/uploads/sites/4/2020/01/man-weight-lifting-training-workout-gym.jpg?quality=82&strip=all&w=1200"
+                alt="" class="image__img" id="imtest1">
+            <div class="image__overlay">
+                <p class="img_description">
+                    I started Ultra Fitness Gym Within’s Remote Coaching over 2 months ago. I have lost some
+                    weight, gotten on a healthy exercise and meal schedule and feel great about myself. The workouts
+                    kick
+                    your butt. I love that I can see how I’m increasing my endurance by being able to do the videos
+                    online
+                    multiple times.
+                </p>
+            </div>
+        </div>
+
+
+        <!-- IMAGE 3 -->
+        <div class="imagess">
+            <img src="https://images.unsplash.com/photo-1548690312-e3b507d8c110?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxzZWFyY2h8Mnx8d29tYW4lMjBneW18ZW58MHx8MHx8&w=1000&q=80"
+                alt="" class="image__img" id="imtest1">
+            <div class="image__overlay">
+                <p class="img_description">
+                    I joined Ultra Fitness Gym Within about 8 months ago and I lost 52lbs. My favorite thing
+                    about their workouts is how much the coaches care and push you. The best thing working with an
+                    accountability coach is their never ending availability to ask questions and get support. I
+                    found their
+                    nutritional guidance and meal plans were easy to follow and modify. I really appreciate how much
+                    everyone there truly cares about your success.
+                </p>
+            </div>
+        </div>
+    <!-- </div> -->
+</div>
+
+<footer>
+    <div class="foot">
+        <div class="main" id="d1">
+            <div class="dam" id="f1">
+                <h1 class="f">ULTRA FITNESS GYM</h1>
+                <br>
+                <p>Burn Gym provides you the fitness solution that's more personal,<br>intelligent and encouraging than
+                    ever before. </p>
+            </div>
+
+            <div class="vl"></div>
+
+            <div class="dam" id="f2">
+                <h1 class="f">LINKS</h1>
+                <br>
+                <ul>
+                    <li>Gym</li>
+                    <li>Blogs</li>
+                    <li>Terms</li>
+                    <li>Privacy Policy</li>
+                    <li>Complaince</li>
+                    <li>Career</li>
+                    <li>Press</li>
+                    <li>Contact Us</li>
+                </ul>
+            </div>
+
+            <div class="vl"></div>
+
+            <div class="dam" id="f3">
+                <h1 class="f">CONTACT</h1>
+                <div class="m">
+                <p>Regional office : SCO 62 and 63,</p>
+                <p>Sector 8 C, Chandigarh</p>
+                <p>0172- 5076490/1</p>
+                <p><a href="info@ultrafitnessgym.com">info@ultrafitnessgym.com</a></p>
+            </div>
+            </div>
+        </div>
+        <hr style="color: gray;">
+        <div class="main" id="d2">
+            <p class="pgraph">&copy; Copyright 2020 Ultra Fitness Gym.  All Rights Reserved</p>
+        </div>
+    </div>
+</footer>
+</body>
+</html>
+

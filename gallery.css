@@ -1,0 +1,691 @@
+
+*{      
+} 
+html{ 
+}  
+body{ 
+/* font attributes */ 
+    font-style: normal; 
+    font-variant: normal; 
+    font-weight: 300; 
+    font-size: 16px; /*line height*/ 
+    font-family:'Segoe UI';
+    background-color: black;
+
+  
+
+/*text attributes */
+    color:white;
+    text-align:center;    
+}
+.container{
+/* flex parent attributes */ 
+    display: flex; 
+    flex-direction: row; 
+    flex-wrap: nowrap; 
+    /* flex-flow: ;  */ /*shorthand property */ 
+    justify-content:space-evenly ; 
+    align-items: center; 
+    align-content: center; 
+    gap:0%;
+}
+.item{ 
+/* flex item attributes */
+    flex-grow:3; 
+    flex-shrink:3; 
+    flex-basis: auto; 
+    /* flex: ; */ /*shorthand property*/ 
+    align-self:center; 
+}
+a{
+text-decoration:none;
+color:white;
+} 
+
+#navbar{
+    height: max-content;
+    background-color: black;
+    border-bottom:1px solid;
+    position:sticky;
+    top: 0%;
+    z-index: 1000;
+}
+
+#navbar > .item:hover{
+    transition-duration:0.3s;
+    font-size:18px;
+    color:red;
+    font-weight:400;
+    cursor:pointer;
+}
+
+
+
+
+
+#gym-tour-img{
+   height: 90%;
+   width: 100%;   
+}
+
+.gym-tour-heading{
+    background-color: rgba(255, 255, 255, 0.1);
+    border-radius: 5px;
+    backdrop-filter:blur(10px);
+    position:absolute;
+    top:15%;
+    left:45%;
+    width: 196px;
+    height: 65px;
+}
+#achievers-img{
+    height:100%;
+    width: 100%;
+     
+ }
+
+.achievers-heading{
+    background-color: rgba(255, 255, 255, 0.1);
+    border-radius: 5px;
+    backdrop-filter:blur(10px);
+    position:absolute;
+    top:105%;
+    left:45%;
+    width: 196px;
+    height: 65px;
+}
+
+.achiever1{
+    position:absolute;
+    top:120%;
+    height: 100%;
+    width: 100%;
+    
+}
+/* .achiever2{
+    position:absolute;
+    top:120%;
+    left:30%;
+}
+.achiever3{
+    position:absolute;
+    top:120%;
+    left:60%;
+} */
+#courses-img{
+    height:118%;
+    width: 100%;  
+ }
+
+
+.img1{
+border:2px solid rgba(255, 0, 0, 0.329);
+border-radius: 50%;
+
+}
+
+
+.courses-heading1{
+    background-color: rgba(255, 255, 255, 0.1);
+    border-radius: 5px;
+    backdrop-filter:blur(10px);
+    position:absolute;
+    top:205%;
+    left:45%;
+    width: 196px;
+    height: 65px;
+    z-index: 999;
+}
+.courses-heading2{
+    background-color: rgba(255, 255, 255, 0.1);
+    border-radius: 5px;
+    backdrop-filter:blur(10px);
+    position:absolute;
+    top:205%;
+    left:45%;
+    width: 196px;
+    height: 65px;
+    z-index: 999;
+}
+.courses-heading3{
+    background-color: rgba(255, 255, 255, 0.1);
+    border-radius: 5px;
+    backdrop-filter:blur(10px);
+    position:absolute;
+    top:205%;
+    left:45%;
+    width: 196px;
+    height: 65px;
+    z-index: 999;
+}
+.courses-heading4{
+    background-color: rgba(255, 255, 255, 0.1);
+    border-radius: 5px;
+    backdrop-filter:blur(10px);
+    position:absolute;
+    top:205%;
+    left:45%;
+    width: 196px;
+    height: 65px;
+    z-index: 999;
+}
+.courses-heading5{
+    background-color: rgba(255, 255, 255, 0.1);
+    border-radius: 5px;
+    backdrop-filter:blur(10px);
+    position:absolute;
+    top:205%;
+    left:45%;
+    width: 196px;
+    height: 65px;
+    z-index: 999;
+}
+.courses-heading6{
+    background-color: rgba(255, 255, 255, 0.1);
+    border-radius: 5px;
+    backdrop-filter:blur(10px);
+    position:absolute;
+    top:205%;
+    left:45%;
+    width: 196px;
+    height: 65px;
+    z-index: 999;
+}
+
+#bk1{
+position: absolute;
+top:215%;
+left:17%;
+border: solid 1px white;
+border-radius: 15px;
+z-index:1;
+}
+
+#course-heading{
+    position: absolute;
+    top:218%;
+    left:56%;
+    z-index:3;
+}
+#course-quote{
+    position: absolute;
+    top:226%;
+    left:50%;
+    z-index:3;
+    color:red;
+    font-size:20px ;
+}
+
+#course-button{
+    width: 282px;
+    height: 50px;
+    background-color: white;
+    border-radius: 5px;
+    position: absolute;
+    top:240%;
+    left:55%;
+    z-index:3;
+    color: red;
+    font-size:20px ;
+}
+
+#course-button:hover{
+    transition-duration:0.3s;
+    font-size:23px;
+    color:white;
+    font-weight:400;
+    cursor:pointer; 
+    background-color: red;
+}
+
+#know-more{
+    position: absolute;
+    top:250%;
+    left:53%;
+    z-index:3;
+    border:2px solid white;
+    width:350px ;
+    height:65px;
+}
+
+#bk2{
+    position: absolute;
+    top:315%;
+    left:17%;
+    border: solid 1px white;
+    border-radius: 15px;
+    z-index:1;
+    }
+    
+    #course-heading2{
+        position: absolute;
+        top:318%;
+        left:56%;
+        z-index:3;
+    }
+    #course-quote2{
+        position: absolute;
+        top:326%;
+        left:46%;
+        z-index:3;
+        color:red;
+        font-size:20px ;
+    }
+
+    #course-button2{
+        width: 282px;
+        height: 50px;
+        background-color: white;
+        border-radius: 5px;
+        position: absolute;
+        top:340%;
+        left:55%;
+        z-index:3;
+        color: red;
+        font-size:20px ;
+    }
+    
+    /* #course-button2{
+        width: 382px;
+        height: 50px;
+        background-color: white;
+        border-radius: 5px;
+        position: absolute;
+        top:340%;
+        left:55%;
+        z-index:3;
+        color: red;
+        font-size:20px ;
+    } */
+    
+    #course-button2:hover{
+        transition-duration:0.3s;
+        font-size:23px;
+        color:white;
+        font-weight:400;
+        cursor:pointer; 
+        background-color: red;
+    }
+
+    #know-more2{
+        position: absolute;
+        top:350%;
+        left:53%;
+        z-index:3;
+        border:2px solid white;
+        width:350px ;
+        height:65px;
+    }
+
+#bk3{
+position: absolute;
+top:415%;
+left:17%;
+border: solid 1px white;
+border-radius: 15px;
+z-index:1;
+}
+
+#course-heading3{
+    position: absolute;
+    top:418%;
+    left:56%;
+    z-index:3;
+}
+#course-quote3{
+    position: absolute;
+    top:426%;
+    left:53%;
+    z-index:3;
+    color:red;
+    font-size:20px ;
+}
+
+#course-button3{
+    width: 282px;
+    height: 50px;
+    background-color: white;
+    border-radius: 5px;
+    position: absolute;
+    top:440%;
+    left:55%;
+    z-index:3;
+    color: red;
+    font-size:20px ;
+}
+
+#course-button3:hover{
+    transition-duration:0.3s;
+    font-size:23px;
+    color:white;
+    font-weight:400;
+    cursor:pointer; 
+    background-color: red;
+}
+
+#know-more3{
+    position: absolute;
+    top:450%;
+    left:53%;
+    z-index:3;
+    border:2px solid white;
+    width:350px ;
+    height:65px;
+}
+
+
+
+#bk4{
+position: absolute;
+top:515%;
+left:17%;
+border: solid 1px white;
+border-radius: 15px;
+z-index:1;
+}
+
+#course-heading4{
+    position: absolute;
+    top:518%;
+    left:62%;
+    z-index:3;
+}
+#course-quote4{
+    position: absolute;
+    top:526%;
+    left:50%;
+    z-index:3;
+    color:red;
+    font-size:20px ;
+}
+
+#course-button4{
+    width: 282px;
+    height: 50px;
+    background-color: white;
+    border-radius: 5px;
+    position: absolute;
+    top:540%;
+    left:56%;
+    z-index:3;
+    color: red;
+    font-size:20px ;
+}
+
+#course-button4:hover{
+    transition-duration:0.3s;
+    font-size:23px;
+    color:white;
+    font-weight:400;
+    cursor:pointer; 
+    background-color: red;
+}
+
+#know-more4{
+    position: absolute;
+    top:550%;
+    left:53%;
+    z-index:3;
+    border:2px solid white;
+    width:350px ;
+    height:65px;
+}
+
+
+
+#bk5{
+position: absolute;
+top:615%;
+left:17%;
+border: solid 1px white;
+border-radius: 15px;
+z-index:1;
+}
+
+#course-heading5{
+    position: absolute;
+    top:618%;
+    left:56%;
+    z-index:3;
+}
+#course-quote5{
+    position: absolute;
+    top:626%;
+    left:52%;
+    z-index:3;
+    color:red;
+    font-size:20px ;
+}
+
+#course-button5{
+    width: 282px;
+    height: 50px;
+    background-color: white;
+    border-radius: 5px;
+    position: absolute;
+    top:640%;
+    left:55%;
+    z-index:3;
+    color: red;
+    font-size:20px ;
+}
+
+#course-button5:hover{
+    transition-duration:0.3s;
+    font-size:23px;
+    color:white;
+    font-weight:400;
+    cursor:pointer; 
+    background-color: red;
+}
+
+#know-more5{
+    position: absolute;
+    top:650%;
+    left:53%;
+    z-index:3;
+    border:2px solid white;
+    width:350px ;
+    height:65px;
+}
+
+
+
+#bk6{
+position: absolute;
+top:715%;
+left:17%;
+border: solid 1px white;
+border-radius: 15px;
+z-index:1;
+}
+
+#course-heading6{
+    position: absolute;
+    top:718%;
+    left:55%;
+    z-index:3;
+}
+#course-quote6{
+    position: absolute;
+    top:726%;
+    left:50%;
+    z-index:3;
+    color:red;
+    font-size:20px ;
+}
+
+#course-button6{
+    width: 282px;
+    height: 50px;
+    background-color: white;
+    border-radius: 5px;
+    position: absolute;
+    top:740%;
+    left:55%;
+    z-index:3;
+    color: red;
+    font-size:20px ;
+}
+
+#course-button6:hover{
+    transition-duration:0.3s;
+    font-size:23px;
+    color:white;
+    font-weight:400;
+    cursor:pointer; 
+    background-color: red;
+}
+
+#know-more6{
+    position: absolute;
+    top:750%;
+    left:53%;
+    z-index:3;
+    border:2px solid white;
+    width:350px ;
+    height:65px;
+}
+/* footer */
+#footer1{
+/* border-top: 2px solid white; */
+height:max-content;
+width: 100%;
+background-color: rgba(255, 0, 0, 0.096);
+align-content: flex-start;
+}
+
+#quicklinks{
+}
+
+#quicklinks > .item{
+    flex-direction: column;
+
+    }
+.footer-links:hover{
+font-size:18px ;
+color:red;
+transition-duration:0.3s;
+}
+/* #quicklinks > .item */
+
+.rights{
+    padding:5px 0px;
+    margin-left: 60px;
+}
+
+
+
+/* carousel */
+.slider-box {
+    width     : 100%;
+    max-height: 80vh;
+    position  : relative;
+    overflow  : hidden;
+    margin    : 30px auto;
+}
+#slider {
+    width     : 100%;
+    display   : inline-flex;
+    transition: 0.7s;
+}
+
+#slider img {
+    width: 100%;
+}
+
+.indicators {
+    position : absolute;
+    left     : 50%;
+    bottom   : 20px;
+    transform: translateX(-50%);
+}
+
+.indicators span {
+    display      : inline-block;
+    width        : 30px;
+    height       : 30px;
+    border-radius: 35%;
+    background   : rgba(255, 255, 255, 0.5);
+    cursor       : pointer;
+}
+
+.active {
+    background: #ffff !important;
+}
+
+
+/* coursel 2 */
+
+.slider-box1 {
+    width     : 100%;
+    max-height: 80vh;
+    position  : relative;
+    overflow  : hidden;
+    margin    : 30px auto;
+}
+#slider1 {
+    width     : 100%;
+    display   : inline-flex;
+    transition: 0.7s;
+}
+
+#slider1 img {
+    width: 100%;
+}
+
+.indicators1 {
+    position : absolute;
+    left     : 50%;
+    bottom   : 20px;
+    transform: translateX(-50%);
+}
+
+.indicators1 span {
+    display      : inline-block;
+    width        : 30px;
+    height       : 30px;
+    border-radius: 35%;
+    background   : rgba(255, 255, 255, 0.5);
+    cursor       : pointer;
+}
+
+.active1 {
+    background: #ffff !important;
+}
+
+#know-more:hover{
+    border:2px solid red;
+    color:red;
+
+}
+
+#know-more2:hover{
+    border:2px solid red;
+    color:red;
+
+}
+
+#know-more3:hover{
+    border:2px solid red;
+    color:red;
+
+}
+
+#know-more4:hover{
+    border:2px solid red;
+    color:red;
+
+}
+
+#know-more5:hover{
+    border:2px solid red;
+    color:red;
+
+}
+
+#know-more6:hover{
+    border:2px solid red;
+    color:red;
+
+}
